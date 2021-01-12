@@ -1,6 +1,6 @@
 # Calculator
 
-![Spyder](https://img.shields.io/badge/Spyder-4.0.0-green?logo=spyderide)
+![Spyder](https://img.shields.io/badge/Spyder-4.0.0-green?logo=anaconda)
 ![Python](https://img.shields.io/badge/Python-3.8.5-blue?logo=python)
 
 1. Enter two numbers that you want to compute.
