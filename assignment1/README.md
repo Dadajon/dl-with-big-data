@@ -1,5 +1,8 @@
 # Calculator
 
+![Spyder](https://img.shields.io/badge/Spyder-4.0.0-red)
+![Python](https://img.shields.io/badge/Python-3.8.5-blue)
+
 1. Enter two numbers that you want to compute.
 
     **Tips:** To do this, you should use Python's built-in input() function that accepts user-generated input from the keyboard. Pass a string to prompt the user inside of the parentheses of the input() function. Assign the user's input to a variable.
