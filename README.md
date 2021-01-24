@@ -17,6 +17,6 @@ Deadline: 2021.01.19 23:59
 Deadline: 2021.01.26 23:59
 
 ### Practice Materials
-[Week 1](https://github.com/Dadajon/dl-with-big-data/blob/main/practice/week1/)
-[Week 2](https://github.com/Dadajon/dl-with-big-data/blob/main/practice/week2/)
-[Week 3](https://github.com/Dadajon/dl-with-big-data/blob/main/practice/week3/)
+- [Week 1](https://github.com/Dadajon/dl-with-big-data/blob/main/practice/week1/)
+- [Week 2](https://github.com/Dadajon/dl-with-big-data/blob/main/practice/week2/)
+- [Week 3](https://github.com/Dadajon/dl-with-big-data/blob/main/practice/week3/)
