@@ -295,5 +295,7 @@ dmypy.json
 .history
 .ionide
 
+daily-report/*
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,visualstudiocode,jupyternotebooks,pycharm
 n
