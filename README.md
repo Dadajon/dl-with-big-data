@@ -3,7 +3,7 @@
 # Deep learning with big data
 
 ![Python](https://img.shields.io/badge/Python-3.8.5-blue?logo=python)
-![Spyder](https://img.shields.io/badge/Spyder-4.0.0-green?logo=anaconda)
+![Spyder](https://img.shields.io/badge/Spyder-4.2.0-green?logo=anaconda)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.3-orange?logo=tensorflow)
 
 ### Assignment 1
