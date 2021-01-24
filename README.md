@@ -7,7 +7,7 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.3-orange?logo=tensorflow)
 
 ### Assignment 1
-[Implement calculator](https://github.com/Dadajon/dl-with-big-data/blob/main/assignments/assignment1)
+[Implement calculator](https://github.com/Dadajon/dl-with-big-data/tree/main/assignments/assignment1)
 
 Deadline: 2021.01.19 23:59
 
