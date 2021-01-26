@@ -335,8 +335,6 @@ print(sqrt(x))
 #%%
 """
 A Short Program: Guess the Number
-
-TODO:
     set a random number between 1 and 20 and guess it!
 
 Example:
