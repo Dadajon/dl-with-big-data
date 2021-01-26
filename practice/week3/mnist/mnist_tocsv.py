@@ -1,4 +1,5 @@
 import struct
+from icecream import ic
 
 def to_csv(name, maxdata):
     lbl_f = open("./mnist/" + name + "-labels-idx1-ubyte", "rb")

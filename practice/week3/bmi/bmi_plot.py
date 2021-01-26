@@ -17,5 +17,5 @@ scatter('normal', 'yellow')
 scatter('thin', 'purple')
 
 ax.legend()
-plt.savefig('bmi-test.png')
+plt.savefig('bmi_test.png')
 plt.show()
