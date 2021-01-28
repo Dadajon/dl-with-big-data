@@ -10,9 +10,9 @@ data = []
 attr_list = []
 
 for row_index, row in mr.iterrows():
-    label.append(row.ix[0])
+    label.append(row.loc[0])
     row_data = []
-    for v in row.ix[1:]:
+    for v in row.loc[1:]:
         row_data.append(ord(v))
     data.append(row_data)
 

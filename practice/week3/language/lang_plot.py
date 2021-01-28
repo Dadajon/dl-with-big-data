@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import json
 
-with open('./lang/freq.json', 'r', encoding='utf-8') as fp:
+with open('dataset/freq.json', 'r', encoding='utf-8') as fp:
     freq = json.load(fp)
 
 lang_dic = {}
@@ -18,6 +18,12 @@ asclist = [[chr(n) for n in range(97, 97+26)]]
 df = pd.DataFrame(lang_dic, index=asclist)
 
 plt.style.use('ggplot')
-df.plot(kind='line')
+df.plot(kind="bar", subplots=True, ylim=(0, 0.15))
+plt.subplots_adjust(hspace=0.9) 
+plt.savefig('lang-plot-bar-graph.png')
 plt.show()
-# plt.savefig('lang-plot.png')
+
+plt.style.use('ggplot')
+df.plot(kind='line')
+plt.savefig('lang-plot-line-graph.png')
+plt.show()

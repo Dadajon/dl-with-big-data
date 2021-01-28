@@ -1,17 +1,17 @@
 import struct
-from icecream import ic
 
 def to_csv(name, maxdata):
+    # rb  -> read back
     lbl_f = open("./mnist/" + name + "-labels-idx1-ubyte", "rb")
     img_f = open("./mnist/" + name + "-images-idx3-ubyte", "rb")
-    csv_f = open("./mnist/" + name + ".csv", "w", encoding="utf-8")
+    # w -> write
+    csv_f = open("./mnist/" + name + ".csv", "w", encoding="utf-8") # output mnist/train.csv
 
     mag, lbl_count = struct.unpack(">II", lbl_f.read(8))
     mag, img_count = struct.unpack(">II", img_f.read(8))
     rows, cols = struct.unpack(">II", img_f.read(8))
     pixels = rows * cols
 
-    res = []
     for idx in range(lbl_count):
         if idx > maxdata:
             break
