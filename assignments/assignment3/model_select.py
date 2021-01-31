@@ -110,7 +110,7 @@ for name,model in models:
     classreport = classification_report(ytest,ypredict)
     confMat = confusion_matrix(ytest,ypredict)
     
-    print('\n=====================', name, "=====================")
+    print('\n=========================', name, "=========================")
     print('The accuracy: {}'.format(acc))
     print('The Classification Report:\n {}'.format(classreport))
     print('The Confusion Matrix:\n {}'.format(confMat))

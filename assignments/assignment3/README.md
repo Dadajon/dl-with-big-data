@@ -11,10 +11,12 @@
 7. Evaluate models on test dataset (print classification report)
 
 ### Summary
+The Iris Dataset contains four features (length and width of sepals and petals) of 50 samples of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). These measures were used to create a linear discriminant model to classify the species. The dataset is often used in data mining, classification and clustering examples and to test algorithms.
 <div align="center">
     <img src="images/iris1.png">
     <img src="images/iris2.png">
 </div>
+
 
 ### Graphs
 
