@@ -5,6 +5,4 @@ b = tf.constant(5000)
 
 add_op = a + b
 
-sess = tf.Session()
-res = sess.run(add_op)
-print(res)
+tf.print(add_op)

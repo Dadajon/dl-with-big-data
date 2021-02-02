@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 csv = pd.read_csv('bmi.csv')
 
@@ -14,8 +15,9 @@ test_csv = csv[15000:20000]
 test_pat = test_csv[['weight', 'height']]
 test_ans = list(test_csv['label_pat'])
 
-x = tf.placeholder(tf.float32, [None, 2])
-y_ = tf.placeholder(tf.float32, [None, 3])
+x = tf.Variable(tf.ones(shape=[None, 2]))
+y_ = tf.Variable(tf.ones([None, 3]))
+
 
 W = tf.Variable(tf.zeros([2, 3]))
 b = tf.Variable(tf.zeros([3]))

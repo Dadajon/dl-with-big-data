@@ -6,7 +6,7 @@ import pandas as pd, numpy as np
 csv = pd.read_csv('bmi.csv')
 csv['weight'] /= 100
 csv['height'] /= 200
-X = csv[['weight', 'height']].values()
+X = csv[['weight', 'height']].values
 
 bclass = {'thin': [1, 0, 0], 'normal': [0, 1, 0], 'fat': [0, 0, 1]}
 y = np.empty((20000, 3))
@@ -37,7 +37,7 @@ model.compile(
 hist = model.fit(
     X_train, y_train,
     batch_size=100,
-    nb_epoch=20,
+    epochs=20,
     validation_split=0.1,
     callbacks=[EarlyStopping(monitor='val_loss', patience=2)],
     verbose=1
