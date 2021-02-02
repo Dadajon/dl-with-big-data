@@ -1,14 +1,14 @@
 import pandas as pd
 from sklearn import model_selection, svm, metrics
-from sklearn.grid_search import GridSearchCV
+from sklearn.model_selection import GridSearchCV
 
 train_csv = pd.read_csv('./train.csv')
 test_csv = pd.read_csv('./t10k.csv')
 
-train_label = train_csv.ix[:, 0]
-train_data = train_csv.ix[:, 1:577]
-test_label = train_csv.ix[:, 0]
-test_data = train_csv.ix[:, 1:577]
+train_label = train_csv.iloc[:, 0]
+train_data = train_csv.iloc[:, 1:577]
+test_label = train_csv.iloc[:, 0]
+test_data = train_csv.iloc[:, 1:577]
 print('학습 데이터의 수 =', len(train_label))
 
 params = [
