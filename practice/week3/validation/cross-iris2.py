@@ -4,8 +4,8 @@ import random, re
 
 csv = pd.read_csv('iris.csv')
 
-data = csv[["SepalLength", "SepalWidth", "PetalLength", "PetalWidth"]]
-label = csv["Name"]
+data = csv[["sepal.length", "sepal.width", "petal.length", "petal.width"]]
+label = csv["variety"]
 
 clf = svm.SVC()
 scores = model_selection.cross_val_score(clf, data, label, cv=5)

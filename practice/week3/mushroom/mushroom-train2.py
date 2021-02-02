@@ -40,6 +40,8 @@ predict = clf.predict(data_test)
 
 ac_score = metrics.accuracy_score(label_test, predict)
 cl_report = metrics.classification_report(label_test, predict)
+cm = metrics.confusion_matrix(label_test, predict)
 
 print('정확도 =', ac_score)
 print('리포트 =\n', cl_report)
+print('혼돈 행렬:\n', cm)

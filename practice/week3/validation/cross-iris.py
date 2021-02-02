@@ -3,7 +3,7 @@ import random, re
 
 lines = open('iris.csv', 'r', encoding='utf-8').read().split('\n')
 f_tonum = lambda n : float(n) if re.match(r'^[0-9\.]+$', n) else n
-f_cols = lambda li: list(map(f_tonum,li.strip().split(',')))
+f_cols = lambda li: list(map(f_tonum, li.strip().split(',')))
 csv = list(map(f_cols, lines))
 del csv[0]
 random.shuffle(csv)
