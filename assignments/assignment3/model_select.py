@@ -55,7 +55,7 @@ def pre_processing(data):
     X = data[['sepal.length', 'sepal.width', 'petal.length', 'petal.width']]  # train
     y = data['variety']  # label, answer
 
-    xtrain, xtest, ytrain, ytest = train_test_split(X, y, test_size=0.33)  # test: 33%  
+    xtrain, xtest, ytrain, ytest = train_test_split(X, y, test_size=0.7)  # test: 33%  
     return  xtrain, xtest, ytrain, ytest
 
 #%%
@@ -83,7 +83,7 @@ models = []  # list
 
 def classification_models(xtrain, xtest, ytrain, ytest):
     models.append( ('KNN', KNeighborsClassifier()) )
-    models.append( ('SVM',  SVC()) )
+    models.append( ('SVM',  SVC(kernel='linear')) )
     # models = [('KNN', KNeighborsClassifier()), ('SVM', SCV()) ]
 
     modeloutcomes = []
