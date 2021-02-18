@@ -1,6 +1,5 @@
 import cv2, sys, re
 
-# 入力ファイルを指定 --- (※1)
 if len(sys.argv) <= 1:
     print("no input file")
     quit()
@@ -12,7 +11,7 @@ mosaic_rate = 30
 cascade_file = "haarcascade_frontalface_alt.xml"
 
 image = cv2.imread(image_file)
-image_gs = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) # グレイスケール変換
+image_gs = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 cascade = cv2.CascadeClassifier(cv2.haarcascades + cascade_file)
 face_list = cascade.detectMultiScale(image_gs,
