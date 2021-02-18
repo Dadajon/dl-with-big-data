@@ -300,5 +300,8 @@ assignments/assignment4/logistic_regression_solution.py
 assignments/assignment4/neural_network_solution.py
 assignments/assignment4/cnn_solution.py
 
+# week5 data
+practice/week5/data/*
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,visualstudiocode,jupyternotebooks,pycharm
 n
