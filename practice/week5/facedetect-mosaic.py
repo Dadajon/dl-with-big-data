@@ -1,9 +1,7 @@
 import cv2, sys, re
+import sys
 
-if len(sys.argv) <= 1:
-    print("no input file")
-    quit()
-image_file = sys.argv[1] 
+image_file = "data/face_img/face1.jpg"
 
 output_file = re.sub(r'\.jpg|jpeg|png$', '-mosaic.jpg', image_file)
 mosaic_rate = 30 
@@ -21,7 +19,7 @@ face_list = cascade.detectMultiScale(image_gs,
 
 if len(face_list) == 0:
     print("no face")
-    quit()
+    sys.exit()
 
 print(face_list)
 color = (0, 0, 255)
