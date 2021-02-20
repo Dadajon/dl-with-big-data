@@ -5,11 +5,27 @@ from __future__ import absolute_import, division, print_function
 import tensorflow as tf
 import numpy as np
 
-#================= IMPORT MNIST DATASET =================
+# MNIST dataset parameters.
+num_classes = 10 # total classes (0-9 digits).
 
-# YOUR CODE
+# Training parameters.
+learning_rate = 0.001
+training_steps = 200
+batch_size = 128
+display_step = 10
 
-#========================================================
+# Network parameters.
+conv1_filters = 32 # number of filters for 1st conv layer.
+conv2_filters = 64 # number of filters for 2nd conv layer.
+fc1_units = 1024 # number of neurons for 1st fully-connected layer.
+
+# Prepare MNIST data.
+from tensorflow.keras.datasets import mnist
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+# Convert to float32.
+x_train, x_test = np.array(x_train, np.float32), np.array(x_test, np.float32)
+# Normalize images value from [0, 255] to [0, 1].
+x_train, x_test = x_train / 255., x_test / 255.
 
 # Use tf.data API to shuffle and batch data.
 train_data = tf.data.Dataset.from_tensor_slices((x_train, y_train))
@@ -126,15 +142,21 @@ for step, (batch_x, batch_y) in enumerate(train_data.take(training_steps), 1):
         print("step: %i, loss: %f, accuracy: %f" % (step, loss, acc))
         
 #%%
-#============= TEST MODEL ON VALIDATION SET =============
-
-# YOUR CODE
-
-#========================================================
+# Test model on validation set.
+pred = conv_net(x_test)
+print("Test Accuracy: %f" % accuracy(pred, y_test))
 
 #%%
-#================ VISUALIZE PREDICTIONS =================
+# Visualize predictions.
+import matplotlib.pyplot as plt
 
-# YOUR CODE
+# Predict 5 images from validation set.
+n_images = 5
+test_images = x_test[:n_images]
+predictions = conv_net(test_images)
 
-#========================================================
+# Display image and model prediction.
+for i in range(n_images):
+    plt.imshow(np.reshape(test_images[i], [28, 28]), cmap='gray')
+    plt.show()
+    print("Model prediction: %i" % np.argmax(predictions.numpy()[i]))

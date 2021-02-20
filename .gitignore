@@ -296,9 +296,6 @@ dmypy.json
 .ionide
 
 daily-report/*
-assignments/assignment4/logistic_regression_solution.py
-assignments/assignment4/neural_network_solution.py
-assignments/assignment4/cnn_solution.py
 
 # week5 data
 practice/week5/data/*
